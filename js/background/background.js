@@ -43,7 +43,13 @@ function performNpcAction(npc, callback){
 			});
 			break;
 		case 'Unique-NPC':
-			
+			checkNpc(npc, function(alreadySaved) {
+				if(alreadySaved)
+					return;
+				saveNpc(npc, function(){
+					console.log('npc saved');
+				});
+			});
 			break;
 	}
 };
