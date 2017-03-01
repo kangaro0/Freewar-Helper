@@ -5,8 +5,10 @@
  */
 
 body, section {			/* Change width and height to own preferences */
-	width: 500px;
-	height: 350px;
+	max-width: 550px;
+	min-width: 450px;
+	max-height: 360px;
+	min-height: 50px;
 	overflow-x: hidden;
 }
 
