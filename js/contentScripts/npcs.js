@@ -11,8 +11,7 @@ var coordinates = {
 };
 
 
-/* EventListeners */
-
+/* EventListeners	-	DOMContent*/
 $('iframe[name=mainFrame]').load(function(event) { 
 	// Array of all available NPCs/Users
 	var listUsersRows = mainFrame.frameElement.contentDocument.querySelectorAll('p.listusersrow');
@@ -50,6 +49,21 @@ $('iframe[name=mapFrame]').load(function(event) {
 		x: posText.split(' ')[3],
 		y: posText.split(' ')[5],
 	};
+});
+
+/* EventListeners 	-	Chrome Runtime Messaging */
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+	if(!chatformFrame || chatformFrame.frameElement.contentDocument.readyState != 'complete')
+		return;
+	
+	if(request.npc){
+		var npcStr = request.npc.name + ' X: ' + request.npc.coordinates.x + ' Y: ' + request.npc.coordinates.y;
+		
+		chatformFrame.frameElement.contentDocument.getElementById('chat_text').value = npcStr;
+		
+		//click grp button
+		chatformFrame.frameElement.contentDocument.getElementById('group').click();
+	}
 });
 
 /* Helper Functions */

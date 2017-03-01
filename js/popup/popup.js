@@ -112,9 +112,10 @@ function initialize(){
 function getTab(callback){
 	var cb = callback;
 	chrome.tabs.query({}, function(tabs) {
-		var expression = /http:\/\/welt[0-9]{1,2}.freewar.de/;
+		var expression = /https:\/\/welt[0-9]{1,2}.freewar.de/;
+		var regexp = new RegExp(expression);
 		for(var i = 0; i < tabs.length; i++){
-			if(tabs[i].url && tabs[i].url.match(expression)){
+			if(tabs[i].url && regexp.test(tabs[i].url)){
 				savedVariables.freewarTab = tabs[i];
 				savedVariables.freewarTabId = tabs[i].id;
 				cb(savedVariables.freewarTab);
@@ -171,8 +172,7 @@ function drawNpcs(){
 	}
 	for(var i = 0; i < npcs.length; i++){
 		drawNpc(npcs[i], i, function(){ //callback for debug
-			console.log('NPC drawn.');
-			console.log(chrome.runtime.lastError);
+			
 		});
 	}
 };
@@ -180,14 +180,18 @@ function drawNpcs(){
 function drawNpc(npc, npcId, callback){
 	var id = npcId;
 	var cb = callback;
-	var npcHtmlString = '<tr><td>' + npc.name + ' </td><td>' + npc.type + '</td><td>' + npc.coordinates.x + '</td><td>' + npc.coordinates.y  + '</td><td><button id="' + id + '" type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td></tr>'
+	var npcHtmlString = '<tr><td>' + npc.name + ' </td><td>' + npc.type + '</td><td>' + npc.coordinates.x + '</td><td>' + npc.coordinates.y  + '</td><td><button id="' + id + '" class="btn btn-success btn-xs send"><span class="glyphicon glyphicon-share"></span></button></td><td><button id="' + id + '" type="button" class="btn btn-danger btn-xs delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td></tr>'
 	
 	var newRow = $('#npcBody').append(npcHtmlString);
 	
-	$('#' + id + '.btn').click(function(event) {
+	$('#' + id + '.delete').click(function(event) {
 		deleteNpc(id);
 	});
 	
+	$('#' + id + '.send').click(function(event) {
+		sendNpc(id);
+	});
+
 	cb();
 };
 
@@ -199,6 +203,16 @@ function deleteNpc(npcId){
 		save('npcs', data, function(){
 				location.reload();
 		});
+	});
+}
+
+function sendNpc(id){
+	if(npcs.length == 0 || npcs.length - 1 < id)
+		return;
+	var npc = npcs[id];
+	
+	chrome.tabs.sendMessage(savedVariables.freewarTabId, { 'npc': npc }, function(response){
+		
 	});
 }
 
