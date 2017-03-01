@@ -18,9 +18,6 @@ $('iframe[name=mainFrame]').load(function(event) {
 	var listUsersRows = mainFrame.frameElement.contentDocument.querySelectorAll('p.listusersrow');
 	
 	for(var i = 0; i < listUsersRows.length; i++){
-		if(listUsersRows[i].childNodes.length == 8) { //User
-			
-		}
 		var npcRawData = null;
 		if(listUsersRows[i].childNodes.length == 1) //NPC
 			npcRawData = listUsersRows[i].childNodes[0].querySelectorAll('td')[1];

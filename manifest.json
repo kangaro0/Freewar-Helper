@@ -30,7 +30,8 @@
 		],
 		"js": [
 			"js/thirdParty/jquery-2.0.3.min.js",
-			"js/contentScripts/npcs.js"
+			"js/contentScripts/npcs.js",
+			"js/contentScripts/items.js"
 		],
 		"runAt": "document_end"
 	}
