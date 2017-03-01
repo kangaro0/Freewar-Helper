@@ -2,7 +2,8 @@
 *	items.js
 *	Adds functionality to Freewar Game
 *	Items	-	click to open wiki page
-*
+*	
+*	Status	-	not working
 */
 
 $('iframe[name=itemFrame]').load(function(event) {
@@ -28,6 +29,6 @@ $('iframe[name=itemFrame]').load(function(event) {
 		link.innerHtml = item.name;
 		
 		//var link = '<a class="wikilink" id="' + i + '" href="http://www.fwwiki.de/index.php/' + item.name + '" target="_blank">' + item.name + '</a>';
-		listItemRows[i].childNodes[0].innerHtml = link;
+		listItemRows[i].childNodes[0].value = link;
 	}
 });
