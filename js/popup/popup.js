@@ -194,7 +194,7 @@ function drawNpc(npc, npcId, callback){
 };
 
 function deleteNpc(npcId){
-	if(npcs.length == 0 || npcs.length - 1 < id)
+	if(npcs.length == 0 || npcs.length - 1 < npcId)
 		return;
 	
 	$('#npcTable' + ( npcId + 1) ).closest('tr').remove();
@@ -207,10 +207,10 @@ function deleteNpc(npcId){
 	});
 }
 
-function sendNpc(id){
-	if(npcs.length == 0 || npcs.length - 1 < id)
+function sendNpc(npcId){
+	if(npcs.length == 0 || npcs.length - 1 < npcId)
 		return;
-	var npc = npcs[id];
+	var npc = npcs[npcId];
 	
 	chrome.tabs.sendMessage(savedVariables.freewarTabId, { 'npc': npc }, function(response){
 		
