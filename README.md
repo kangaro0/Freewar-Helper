@@ -5,11 +5,13 @@
 
 ## Jump to Section
 
-* [Ordnerstruktur](#ordnerstruktur)
+* [Getting Started](#getting-started)
 * [Installation](#installation)
 * [Usage](#usage)
 
-## Ordnerstruktur
+## Getting started
+
+### Ordnerstruktur
 
 Die Ordnerstruktur des Freewar Helpers:
 
