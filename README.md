@@ -50,7 +50,7 @@
 
 Der Freewar Helper zeichnet nie vertraulichen Informationen auf. Nicht jetzt und nicht in zukünftigen Versionen.
 
-Die Daten, die der Bot speichert werden in deinem Google Konto gespeichert, damit du auch beim Spielen am Laptop, Arbeitsrechner (;)), usw..., nicht auf den Freewar Helper verzichten musst. 
+Die Daten, die der Bot speichert werden in deinem Google Konto gespeichert, damit du auch beim Spielen am Laptop, Arbeitsrechner, usw..., nicht auf den Freewar Helper verzichten musst. 
 
 ### Was speichert der Bot und wie funktionierts?
 
