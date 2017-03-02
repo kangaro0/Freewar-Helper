@@ -76,6 +76,10 @@ Ausserdem wird der normale Text durch einen Link zum jeweiligen Wiki-Eintrag ers
 Beim Spielen füllt sich die Liste an NPC's in der Erweiterung. 
 - Mit einem Klick auf den **grünen Button** sendest du das NPC zu deiner Gruppe. 
 - Mit einem Klick auf den **roten Button** löscht du das NPC von der Liste.
+
+## Bekannte Bugs
+
+- bewegliche NPCs werden mehrmals gespeichert. 
 	
 
 
