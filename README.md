@@ -49,11 +49,13 @@
 ## Wichtige Informationen
 
 Der Freewar Helper zeichnet nie vertraulichen Informationen auf. Nicht jetzt und nicht in zukünftigen Versionen.
+
 Die Daten, die der Bot speichert werden in deinem Google Konto gespeichert, damit du auch beim Spielen am Laptop, Arbeitsrechner (;)), usw..., nicht auf den Freewar Helper verzichten musst. 
 
 ### Was speichert der Bot und wie funktionierts?
 
 Immer wenn du ein Feld im Spiel wechselst, wird überprüft ob sich ein NPC auf dem Feld befindet. Sollte dies der Fall sein, wird das NPC automatisiert an die Erweiterung übertragen.
+
 Die Daten, die gesendet werden, sehen dann beispielhaft so aus:
 
 ```
