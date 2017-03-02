@@ -3,14 +3,6 @@
 *	Handles data sent from content_script to extension
 */
 
-var NPCHandler = {
-	npcCount: 0,
-	save: function(npc, callback){
-		
-	}
-}
-
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 	if(!request)
 		return;

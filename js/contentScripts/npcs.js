@@ -65,9 +65,3 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		chatformFrame.frameElement.contentDocument.getElementById('group').click();
 	}
 });
-
-/* Helper Functions */
-function addLink(callback){
-	var cb = callback;
-	
-}

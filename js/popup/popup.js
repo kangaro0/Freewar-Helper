@@ -15,8 +15,6 @@ var savedVariables = {
 /* npcs - contains all saved npcs */
 var npcs = [];
 
-
-
 /*
 *	CustomEventHandler
 */
