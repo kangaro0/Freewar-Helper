@@ -69,7 +69,7 @@ Die Daten, die gesendet werden, sehen dann beispielhaft so aus:
 
 Ausserdem wird der normale Text durch einen Link zum jeweiligen Wiki-Eintrag ersetzt. Bei diesem Vorgang werden keinerlei Daten versendet.
 
-### Usage
+## Usage
 
 Beim Spielen füllt sich die Liste an NPC's in der Erweiterung. 
 - Mit einem Klick auf den **grünen Button** sendest du das NPC zu deiner Gruppe. 
