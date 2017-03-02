@@ -180,7 +180,7 @@ function drawNpc(npc, npcId, callback){
 	var cb = callback;
 	var npcHtmlString = '<tr><td>' + npc.name + ' </td><td>' + npc.type + '</td><td>' + npc.coordinates.x + '</td><td>' + npc.coordinates.y  + '</td><td><button id="' + id + '" class="btn btn-success btn-xs send"><span class="glyphicon glyphicon-share"></span></button></td><td><button id="' + id + '" type="button" class="btn btn-danger btn-xs delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></td></tr>'
 	
-	var newRow = $('#npcBody').append(npcHtmlString);
+	$('#npcBody').append(npcHtmlString);
 	
 	$('#' + id + '.delete').click(function(event) {
 		deleteNpc(id);
@@ -194,6 +194,9 @@ function drawNpc(npc, npcId, callback){
 };
 
 function deleteNpc(npcId){
+	if(npcs.length == 0 || npcs.length - 1 < id)
+		return;
+	
 	$('#npcTable' + ( npcId + 1) ).closest('tr').remove();
 	
 	load('npcs', function(data) {
