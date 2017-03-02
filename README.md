@@ -72,8 +72,8 @@ Ausserdem wird der normale Text durch einen Link zum jeweiligen Wiki-Eintrag ers
 ### Usage
 
 Beim Spielen füllt sich die Liste an NPC's in der Erweiterung. 
-	- Mit einem Klick auf den grünen Button sendest du das NPC zu deiner Gruppe. 
-	- Mit einem Klick auf den 'roten Button' loescht du das NPC von der Liste.
+- Mit einem Klick auf den **grünen Button** sendest du das NPC zu deiner Gruppe. 
+- Mit einem Klick auf den **roten Button** löscht du das NPC von der Liste.
 	
 
 
