@@ -36,7 +36,7 @@
 
 ### Installation
 
-- Repository clonen oder als Zip-File downloaden.
+- Im oberen Teil der Seite auf 'Releases' klicken und die neuste Version herunterladen.
 - Inhalt in gewünschten Ordner kopieren, z.B. Desktop/Freewar Helper
 - Google Chrome Browser öffnen.
 - Auf die Seite 'chrome://extensions' navigieren.
