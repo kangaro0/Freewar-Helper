@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Freewar Helper",
 	"description": "hf & gl",
-	"version": "0.1",
+	"version": "1.0.0",
 	"permissions": [
 		"storage",
 		"contextMenus",
@@ -35,6 +35,5 @@
 		],
 		"runAt": "document_end"
 	}
-	],
-	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+	]
 }
