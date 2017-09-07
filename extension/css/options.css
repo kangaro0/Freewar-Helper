@@ -1,0 +1,29 @@
+/**
+ * Freewar Helper
+ * Custom CSS - Options
+ *	
+ */
+
+body {			/* Change width and height to own preferences */
+	
+	overflow-x: hidden;
+}
+
+/* modules */
+
+.module {
+	padding-left: 15px;
+}
+
+.module h3 {
+	
+}
+
+.module p {
+	font-weight: bold;
+}
+
+.row {
+	margin: 0 !important;
+	padding: 0 0 0 5px !important;
+}
